@@ -21,11 +21,11 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        /*stage('Deliver') {
             steps {
                 sh '/jenkins/scripts/deliver.sh'
             }
-        }
+        }*/
     }
 
 	post {
@@ -43,7 +43,7 @@ pipeline {
             echo 'Things were different before...'
         }
         failure {
-            echo 'I failed :('
+            echo 'I failed!'
            /* mail to: 'team@example.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                  body: "Something is wrong with ${env.BUILD_URL}"*/
